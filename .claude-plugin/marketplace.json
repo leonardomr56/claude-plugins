@@ -6,7 +6,7 @@
     {
       "name": "nota-de-voz",
       "source": "./plugins/nota-de-voz",
-      "description": "Transcribe notas de voz de WhatsApp en local y usa lo que dicen como base de una petición"
+      "description": "Transcribe en local notas de voz de WhatsApp, audios y videos y usa lo que dicen como base de una petición"
     }
   ]
 }

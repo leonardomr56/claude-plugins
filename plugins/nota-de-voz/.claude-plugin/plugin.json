@@ -1,7 +1,7 @@
 {
   "name": "nota-de-voz",
-  "version": "1.0.0",
-  "description": "Transcribe notas de voz de WhatsApp (.ogg) en local con faster-whisper y usa lo que dicen como base de una petición",
+  "version": "1.1.0",
+  "description": "Transcribe en local notas de voz de WhatsApp, audios y videos con faster-whisper y usa lo que dicen como base de una petición",
   "author": { "name": "Leonardo Melo" },
   "repository": "https://github.com/leonardomr56/claude-plugins",
   "license": "MIT"

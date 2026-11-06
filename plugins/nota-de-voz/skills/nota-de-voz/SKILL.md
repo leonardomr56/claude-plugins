@@ -1,7 +1,7 @@
 ---
 name: nota-de-voz
-description: Transcribe notas de voz de WhatsApp (.ogg en la carpeta de Descargas) u otros audios en local y usa lo que dicen como base de una peticion (crear una tarea, redactar una respuesta o un correo, escribir una spec, implementar algo). Usar cuando el usuario dice "nota de voz", "audio", "transcribe", "escucha esto", pasa un .ogg o invoca /nota-de-voz.
-argument-hint: "[archivo.ogg | --ultimas N] [que hacer con lo que dice]"
+description: Transcribe en local notas de voz de WhatsApp, audios (ogg, opus, mp3, m4a, wav...) y videos (mp4, mkv, mov, webm...) y usa lo que dicen como base de una peticion (crear una tarea, redactar una respuesta o un correo, escribir una spec, resumir una reunion, implementar algo). Usar cuando el usuario dice "nota de voz", "audio", "video", "grabacion", "reunion grabada", "transcribe", "escucha esto", pasa un archivo de audio o video o invoca /nota-de-voz.
+argument-hint: "[archivo de audio o video | --ultimas N] [que hacer con lo que dice]"
 ---
 
 # Nota de voz → peticion
@@ -9,8 +9,10 @@ argument-hint: "[archivo.ogg | --ultimas N] [que hacer con lo que dice]"
 Argumentos: `$ARGUMENTS`
 
 1. **Transcribir.** Lanza el agente `nota-de-voz:transcriptor-voz` pasandole los archivos o `--ultimas N` que vengan
-   en los argumentos (sin nada: la nota mas reciente de Descargas). Si el agente no esta disponible, corre tu mismo
-   `uv run --quiet "${CLAUDE_SKILL_DIR}/transcribir.py" [archivos] [--ultimas N]` (timeout 600000).
+   en los argumentos (sin nada: la nota de voz de WhatsApp mas reciente de Descargas). Sirve cualquier audio o video
+   que lea ffmpeg; de los videos solo se usa el audio. Si el agente no esta disponible, corre tu mismo
+   `uv run --quiet "${CLAUDE_SKILL_DIR}/transcribir.py" [archivos] [--ultimas N] [--marcas]` (timeout 600000;
+   `--marcas` en videos o audios de mas de ~3 min, y en segundo plano si pasan de ~20 min).
 
 2. **Mostrar.** Pon la version limpia y la peticion que detecto el agente. Lo dudoso ([?]) se senala, no se adivina.
 
