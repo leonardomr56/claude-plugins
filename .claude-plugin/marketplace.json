@@ -1,0 +1,12 @@
+{
+  "name": "leonardomr56-plugins",
+  "owner": { "name": "Leonardo Melo" },
+  "description": "Plugins de Claude Code de Leonardo Melo",
+  "plugins": [
+    {
+      "name": "nota-de-voz",
+      "source": "./plugins/nota-de-voz",
+      "description": "Transcribe notas de voz de WhatsApp en local y usa lo que dicen como base de una petición"
+    }
+  ]
+}
